@@ -10,4 +10,5 @@ publish:
   image: node:18
   stage: release
   script:
+    - npm i
     - npx semantic-release
