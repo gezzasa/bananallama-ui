@@ -6,9 +6,20 @@ stages:
 before_script:
   - npm install
 
+release-test:
+  image: node:18
+  stage: test
+  script:
+    - npm i
+    - npm run release:check
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+
 publish:
   image: node:18
   stage: release
   script:
     - npm i
-    - npx semantic-release
+    - npm run release
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
