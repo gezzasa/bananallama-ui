@@ -1,3 +1,10 @@
+## [0.0.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.0.0...v0.0.1) (2023-02-12)
+
+
+### Bug Fixes
+
+* adjust gitlab ci scripts ([b457a2e](https://gitlab.com/bananallama/banallama-ui/commit/b457a2ea70772f1c665d3fc5c0841d8e75268b9d))
+
 ## 1.0.0 (2023-02-11)
 
 
