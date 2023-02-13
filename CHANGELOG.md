@@ -1,3 +1,10 @@
+## [0.1.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.0.1...v0.1.0) (2023-02-13)
+
+
+### Features
+
+* add form elements ([19d3309](https://gitlab.com/bananallama/banallama-ui/commit/19d3309e67e44a89817bc942d29cb5448740a64b))
+
 ## [0.0.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.0.0...v0.0.1) (2023-02-12)
 
 
