@@ -1,3 +1,10 @@
+## [0.1.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.1.0...v0.1.1) (2023-02-13)
+
+
+### Bug Fixes
+
+* **readme:** update readme ([408eebc](https://gitlab.com/bananallama/banallama-ui/commit/408eebcab92e0962eb359e7179c6afdf0488668c))
+
 ## [0.1.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.0.1...v0.1.0) (2023-02-13)
 
 
