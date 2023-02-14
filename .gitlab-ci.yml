@@ -1,5 +1,4 @@
 # The release pipeline will run only if all jobs in the test pipeline are successful
-
 .semantic-branches: &semantic-branches
   if: >-
     $CI_COMMIT_REF_NAME == "main" ||
@@ -8,16 +7,6 @@
     $CI_COMMIT_REF_NAME == "alpha" ||
     $CI_COMMIT_REF_NAME == "beta"
   when: on_success
-
-.non-semantic-branches: &non-semantic-branches
-  if: >-
-    $CI_COMMIT_REF_NAME != "main" ||
-    $CI_COMMIT_REF_NAME != "next" ||
-    $CI_COMMIT_REF_NAME != "next-major" ||
-    $CI_COMMIT_REF_NAME != "alpha" ||
-    $CI_COMMIT_REF_NAME != "beta"
-  when: on_success
-
 
 stages:
   - test
@@ -30,15 +19,17 @@ release-test:
   image: node:18
   stage: test
   script:
+    - env
+    - npm i
     - npm run release:check
   rules:
-    - *non-semantic-branches
-
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH || $CI_COMMIT_BRANCH != 'next' || $CI_COMMIT_BRANCH != 'beta' || $CI_COMMIT_BRANCH != 'alpha'
 
 publish:
   image: node:18
   stage: release
   script:
+    - npm i
     - npm run release
   rules:
-    - *semantic-branch-rule
+    - *semantic-branches
