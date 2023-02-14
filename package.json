@@ -1,7 +1,7 @@
 {
-  "name": "ballama-ui",
-  "version": "0.1.1",
-  "description": "",
+  "name": "bananallama-ui",
+  "version": "0.0.0",
+  "description": "Simple Ui Library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

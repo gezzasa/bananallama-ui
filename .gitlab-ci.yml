@@ -1,4 +1,5 @@
 # The release pipeline will run only if all jobs in the test pipeline are successful
+
 stages:
   - test
   - release
@@ -10,10 +11,11 @@ release-test:
   image: node:18
   stage: test
   script:
+    - env
     - npm i
     - npm run release:check
   rules:
-    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+   - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 
 publish:
   image: node:18
@@ -22,4 +24,4 @@ publish:
     - npm i
     - npm run release
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "next" || $CI_COMMIT_BRANCH == "next-major" || $CI_COMMIT_BRANCH == "alpha" || $CI_COMMIT_BRANCH == "beta"
