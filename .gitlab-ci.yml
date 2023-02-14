@@ -12,6 +12,7 @@ release-test:
   script:
     - npm i
     - npm run release:check
+    - echo "$CI_COMMIT_BRANCH"
   rules:
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH || $CI_COMMIT_BRANCH != 'next' || $CI_COMMIT_BRANCH != 'beta' || $CI_COMMIT_BRANCH != 'alpha'
 
