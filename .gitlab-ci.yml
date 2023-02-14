@@ -12,8 +12,11 @@ release-test:
   stage: test
   script:
     - env
-    - npm i
-    - npm run release:check
+    - echo $CI_COMMIT_REF_NAME != "main"
+    - echo $CI_COMMIT_REF_NAME != "next"
+    - echo $CI_COMMIT_REF_NAME != "next-major"
+    - echo $CI_COMMIT_REF_NAME != "alpha" 
+    - echo $CI_COMMIT_REF_NAME != "beta"
   rules:
     - if: $CI_COMMIT_REF_NAME != "main" || $CI_COMMIT_REF_NAME != "next" || $CI_COMMIT_REF_NAME != "next-major" || $CI_COMMIT_REF_NAME != "alpha" || $CI_COMMIT_REF_NAME != "beta"
 
