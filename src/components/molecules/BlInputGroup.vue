@@ -26,8 +26,8 @@
 
 <script setup lang="ts">
 import { toRefs } from 'vue';
-import BlInput from '@/components/atoms/BlInput.vue';
-import BlInputLabel from '@/components/atoms/BlInputLabel.vue';
+import BlInput from '../atoms/BlInput.vue';
+import BlInputLabel from '../atoms/BlInputLabel.vue';
 
 const props = defineProps({
   label: {

@@ -29,12 +29,10 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from 'vue';
-import BlCheckbox from '@/components/atoms/BlCheckbox.vue';
-import BlInputLabel from '@/components/atoms/BlInputLabel.vue';
+import BlCheckbox from '../atoms/BlCheckbox.vue';
+import BlInputLabel from '../atoms/BlInputLabel.vue';
 
-
-const props = defineProps({
+defineProps({
   label: {
     type: String,
     default: '',
@@ -48,6 +46,4 @@ const props = defineProps({
     default: () => [],
   },
 });
-
-const { label, id, errors } = toRefs(props);
 </script>

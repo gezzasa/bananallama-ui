@@ -36,9 +36,9 @@
 
 <script setup lang="ts">
 import { toRefs } from 'vue';
-import BlSelect from '@/components/atoms/BlSelect.vue';
-import BlInputLabel from '@/components/atoms/BlInputLabel.vue';
-import BlOption from '@/components/atoms/BlOption.vue';
+import BlSelect from '../atoms/BlSelect.vue';
+import BlInputLabel from '../atoms/BlInputLabel.vue';
+import BlOption from '../atoms/BlOption.vue';
 
 const props = defineProps({
   label: {
