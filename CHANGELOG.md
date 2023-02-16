@@ -1,3 +1,10 @@
+## [0.2.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.1.0...v0.2.0) (2023-02-16)
+
+
+### Features
+
+* add components ([6e7f6d9](https://gitlab.com/bananallama/banallama-ui/commit/6e7f6d914ee1e2aa96cf3104ff4c6508dd12b7f3))
+
 ## [0.1.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.0.0...v0.1.0) (2023-02-14)
 
 
