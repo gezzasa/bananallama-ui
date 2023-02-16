@@ -7,7 +7,7 @@
 </template>
 <script setup lang="ts">
 import { toRefs, computed } from 'vue';
-import BlInputGroup from '@/components/molecules/BlInputGroup.vue';
+import BlInputGroup from './BlInputGroup.vue';
 
 
 const props = defineProps({
