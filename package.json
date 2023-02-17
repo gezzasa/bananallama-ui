@@ -8,12 +8,7 @@
     "release:check": "npm run release -- --dry-run --debug",
     "release": "npx semantic-release"
   },
-  "devDependencies": {
-    "@semantic-release/changelog": "^6.0.2",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^9.0.2",
-    "@semantic-release/release-notes-generator": "^10.0.3",
+  "dependencies": {
     "@tiptap/extension-bold": "2.0.0-beta.199",
     "@tiptap/extension-bullet-list": "2.0.0-beta.199",
     "@tiptap/extension-color": "2.0.0-beta.199",
@@ -30,11 +25,16 @@
     "@tiptap/extension-text-style": "2.0.0-beta.199",
     "@tiptap/suggestion": "2.0.0-beta.199",
     "@tiptap/vue-3": "2.0.0-beta.199",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.2",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "conventional-changelog-conventionalcommits": "^5.0.0"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "vue": "^3.2.47"
-  }
+  "license": "ISC"
 }
