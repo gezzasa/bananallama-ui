@@ -1,3 +1,10 @@
+## [0.2.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.2.0...v0.2.1) (2023-02-17)
+
+
+### Bug Fixes
+
+* add tiptap dependencies ([b47b7c8](https://gitlab.com/bananallama/banallama-ui/commit/b47b7c8bcf1be782189adac15911a8810d143fa8))
+
 ## [0.2.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.1.0...v0.2.0) (2023-02-16)
 
 
