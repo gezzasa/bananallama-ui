@@ -1,0 +1,39 @@
+:root {
+  --color-text: #222222;
+
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+
+  --input-display: grid;
+  --input-gap: var(--spacing-xs);
+  --checkbox-display: flex;
+  --checkbox-gap: var(--spacing-xs);
+  --grid-display: grid;
+  --grid-gap: var(--spacing-md);
+}
+
+.bl-input__label-copy,
+.bl-select__label-copy {
+  color: var(--color-text);
+}
+
+.bl-input-group,
+.bl-select-group {
+  display: var(--input-display);
+  gap: var(--input-gap);
+}
+
+.bl-checkbox-group {
+  display: var(--checkbox-display);
+  gap: var(--checkbox-gap);
+}
+
+.bl-grid {
+  display: var(--grid-display);
+  gap: var(--grid-gap);
+}
