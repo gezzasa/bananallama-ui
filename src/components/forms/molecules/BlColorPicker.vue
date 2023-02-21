@@ -3,6 +3,7 @@
     id="element-color"
     v-model="computedValue"
     :label="label"
+    :error="errors"
   />
 </template>
 <script setup lang="ts">

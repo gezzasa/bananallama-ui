@@ -13,7 +13,7 @@
     'next',
     'next-major',
     {name: 'beta', prerelease: true},
-    {name: 'alpha', prerelease: true}
+    {name: 'alpha', prerelease: true},
   ],
   plugins: [
     [
@@ -42,6 +42,6 @@
   prepare: ['@semantic-release/changelog', '@semantic-release/npm', '@semantic-release/git'],
   addChannel: ['@semantic-release/npm'],
   publish: ['@semantic-release/npm'],
-}
+};
 
-module.exports = config
+module.exports = config;
