@@ -1,3 +1,10 @@
+## [0.3.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.2.2...v0.3.0) (2023-02-21)
+
+
+### Features
+
+* add grid component ([4431749](https://gitlab.com/bananallama/banallama-ui/commit/443174947fe0f1902da99af2cd408092e0f43e5e))
+
 ## [0.2.2](https://gitlab.com/bananallama/banallama-ui/compare/v0.2.1...v0.2.2) (2023-02-17)
 
 
