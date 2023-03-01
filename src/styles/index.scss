@@ -1,39 +1,64 @@
 :root {
-  --color-text: #222222;
+  --bl-color-text: #222222;
 
-  --spacing-xxs: 2px;
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 20px;
-  --spacing-xl: 24px;
-  --spacing-xxl: 32px;
+  --bl-font-family: inherit;
 
-  --input-display: grid;
-  --input-gap: var(--spacing-xs);
-  --checkbox-display: flex;
-  --checkbox-gap: var(--spacing-xs);
-  --grid-display: grid;
-  --grid-gap: var(--spacing-md);
+  --bl-spacing-xxs: 2px;
+  --bl-spacing-xs: 4px;
+  --bl-spacing-sm: 8px;
+  --bl-spacing-md: 16px;
+  --bl-spacing-lg: 20px;
+  --bl-spacing-xl: 24px;
+  --bl-spacing-xxl: 32px;
+
+  --bl-input-display: grid;
+  --bl-input-gap: var(--bl-spacing-xs);
+  --bl-input-padding: var(--bl-spacing-sm) var(--bl-spacing-xs); 
+  --bl-input-font-size: 16px;
+  --bl-input-border-radius: 4px;
+  --bl-input-border-size: 1px;
+  --bl-input-border-style: solid;
+  --bl-input-border-color: #cecece;
+  --bl-input-box-shadow: inset 0 1px 3px #ddd;
+  --bl-input-group-display: grid;
+  --bl-checkbox-group-display: block;
+  --bl-checkbox-group-margin: var(--bl-spacing-md) 0;
+  --bl-grid-display: grid;
+  --bl-grid-gap: var(--bl-spacing-md);
 }
 
 .bl-input__label-copy,
 .bl-select__label-copy {
-  color: var(--color-text);
+  color: var(--bl-color-text);
+}
+
+.pb-select,
+.pb-input {
+  padding: var(--bl-input-padding);
+  font-size: var(--bl-input-font-size);
+  border-radius: var(--bl-input-border-radius);
+  border: var(--bl-input-border-size) var(--bl-input-border-style) var(--bl-input-border-color);
+  box-shadow: var(--bl-input-box-shadow);
+}
+
+.bl-checkbox-group,
+.bl-input-group,
+.bl-select-group {
+  font-family: var(--bl-font-family);
 }
 
 .bl-input-group,
 .bl-select-group {
-  display: var(--input-display);
-  gap: var(--input-gap);
+  display: var(--bl-input-group-display);
+  gap: var(--bl-input-gap);
 }
 
 .bl-checkbox-group {
-  display: var(--checkbox-display);
-  gap: var(--checkbox-gap);
+  display: var(--bl-checkbox-group-display);
+  margin: var(--bl-checkbox-group-margin);
 }
 
 .bl-grid {
-  display: var(--grid-display);
-  gap: var(--grid-gap);
+  display: var(--bl-grid-display);
+  gap: var(--bl-grid-gap);
 }
