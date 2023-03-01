@@ -1,3 +1,10 @@
+## [0.4.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.3.0...v0.4.0) (2023-03-01)
+
+
+### Features
+
+* add css properties to form elements ([f2020d4](https://gitlab.com/bananallama/banallama-ui/commit/f2020d4ea1ba15f1de6b96ebc60ec25b7adab19c))
+
 ## [0.3.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.2.2...v0.3.0) (2023-02-21)
 
 
