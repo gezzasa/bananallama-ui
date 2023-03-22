@@ -1,3 +1,10 @@
+## [0.5.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.4.0...v0.5.0) (2023-03-22)
+
+
+### Features
+
+* add more types and vitest ([bfa5009](https://gitlab.com/bananallama/banallama-ui/commit/bfa50091e935552811c1a9ad1c57a6943581151e))
+
 ## [0.4.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.3.0...v0.4.0) (2023-03-01)
 
 
