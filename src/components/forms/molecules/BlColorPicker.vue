@@ -26,7 +26,7 @@ const props = defineProps({
   },
 });
 
-const { label, modelValue, error } = toRefs(props);
+const { label, modelValue, errors } = toRefs(props);
 
 const emit = defineEmits(['update:modelValue']);
 

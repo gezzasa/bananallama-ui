@@ -2,9 +2,9 @@
 
 <template>
   <select
-    :id="$attrs.id"
+    :id="id"
     v-model="computedValue"
-    :name="$attrs.id"
+    :name="id"
     class="pb-select"
     data-test="pb-select"
     :class="{ error: error }"
@@ -17,6 +17,10 @@
 import { toRefs, computed } from 'vue';
 
 const props = defineProps({
+  id: {
+    type: String,
+    required: true,
+  },
   modelValue: {
     type: String,
     required: true,

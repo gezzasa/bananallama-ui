@@ -1,5 +1,5 @@
 <template>
-  {{ title }}
+  {{ label }}
   <div class="editor-container">
     <RichTextEditorMenu
       v-if="editor"
@@ -41,7 +41,7 @@ export default defineComponent({
   },
 
   props: {
-    title: {
+    label: {
       type: String,
       default: 'Rich text',
     },
@@ -52,6 +52,10 @@ export default defineComponent({
     suggestions: {
       type: Array,
       default: () => [],
+    },
+    suggestionCharacter: {
+      type: String,
+      default: null,
     },
   },
 

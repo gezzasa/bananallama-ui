@@ -33,7 +33,7 @@ const computedValue = computed({
   get() {
     return modelValue.value;
   },
-  set(value: Object) {
+  set(value: Boolean) {
     emit('update:modelValue', value);
   },
 });

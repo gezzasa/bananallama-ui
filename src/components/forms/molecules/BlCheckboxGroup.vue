@@ -1,6 +1,6 @@
 <template>
   <BlInputLabel
-    :for="id"
+    :is-for="id"
     class-name="bl-checkbox-group"
   >
     <slot name="label-before" />
