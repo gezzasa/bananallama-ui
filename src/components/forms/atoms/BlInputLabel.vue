@@ -4,7 +4,7 @@
   <label
     class="pb-input__label"
     :class="className"
-    :for="$attrs.for"
+    :for="isFor"
   >
     <slot />
   </label>
@@ -17,6 +17,10 @@ const props = defineProps({
   className: {
     type: String,
     default: '',
+  },
+  isFor: {
+    type: String,
+    required: true,
   },
 });
 

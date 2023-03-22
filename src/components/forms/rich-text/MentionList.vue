@@ -70,7 +70,7 @@ export default defineComponent({
       selectItem(selectedIndex.value);
     }
 
-    function selectItem(index) {
+    function selectItem(index: number) {
       const item = props.items[index];
 
       if (item) {

@@ -1,7 +1,7 @@
 <template>
   <BlInputLabel
     v-if="label"
-    :for="id"
+    :is-for="id"
     class-name="bl-select-group"
   >
     <span class="bl-select__label-copy">
@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from 'vue';
+import { PropType, toRefs } from 'vue';
 import BlSelect from '../atoms/BlSelect.vue';
 import BlInputLabel from '../atoms/BlInputLabel.vue';
 import BlOption from '../atoms/BlOption.vue';
@@ -52,7 +52,7 @@ const props = defineProps({
     default: null,
   },
   errors: {
-    type: Array,
+    type: Array as PropType<Object[]>,
     default: () => [],
   },
 });

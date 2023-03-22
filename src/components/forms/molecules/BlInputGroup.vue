@@ -1,7 +1,7 @@
 <template>
   <BlInputLabel
     v-if="label"
-    :for="id"
+    :is-for="id"
     class-name="bl-input-group"
   >
     <span class="bl-input__label-copy">

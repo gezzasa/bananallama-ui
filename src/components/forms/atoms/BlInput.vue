@@ -30,7 +30,7 @@ const computedValue = computed({
   get() {
     return modelValue.value;
   },
-  set(value: Object) {
+  set(value: String) {
     emit('update:modelValue', value);
   },
 });

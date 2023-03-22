@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, toRefs } from 'vue';
+import { toRefs } from 'vue';
 
 const props = defineProps({
   option: {
@@ -18,8 +18,4 @@ const props = defineProps({
 });
 
 const { option } = toRefs(props);
-
-const label = computed(() => {
-  return option.value.label ?? option.value.value;
-});
 </script>
