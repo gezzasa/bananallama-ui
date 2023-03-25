@@ -1,3 +1,10 @@
+## [0.6.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.5.0...v0.6.0) (2023-03-25)
+
+
+### Features
+
+* export button ([9414c42](https://gitlab.com/bananallama/banallama-ui/commit/9414c4275ab4dbd28aa8277f236693620e78fa6c))
+
 ## [0.5.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.4.0...v0.5.0) (2023-03-22)
 
 
