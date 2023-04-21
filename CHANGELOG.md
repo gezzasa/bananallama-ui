@@ -1,3 +1,10 @@
+## [0.6.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.0...v0.6.1) (2023-04-21)
+
+
+### Bug Fixes
+
+* add Hardbreak to rich text editor ([a2c024d](https://gitlab.com/bananallama/banallama-ui/commit/a2c024d8e0217c140c08977f629df775d91f8743))
+
 ## [0.6.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.5.0...v0.6.0) (2023-03-25)
 
 
