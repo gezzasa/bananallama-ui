@@ -30,6 +30,7 @@ import Text from '@tiptap/extension-text';
 import TextStyle from '@tiptap/extension-text-style';
 import History from '@tiptap/extension-history';
 import Mention from '@tiptap/extension-mention';
+import HardBreak from '@tiptap/extension-hard-break';
 
 import RichTextEditorMenu from './RichTextEditorMenu.vue';
 import suggestion from './suggestion';
@@ -82,6 +83,12 @@ export default defineComponent({
       },
     });
 
+    HardBreak.configure({
+      HTMLAttributes: {
+        class: 'my-custom-class',
+      },
+    });
+
     const editor = useEditor({
       content: props.modelValue,
       extensions: [
@@ -102,6 +109,7 @@ export default defineComponent({
         ListItem,
         OrderedList,
         History,
+        HardBreak,
         props.suggestions.length ? mention : null,
       ],
       onUpdate: ({ editor }) => {
@@ -114,6 +122,8 @@ export default defineComponent({
 
   watch: {
     modelValue(value) {
+      if (!this.editor) return;
+
       const isSame = this.editor.getHTML() === value;
 
       if (isSame) {
@@ -125,6 +135,8 @@ export default defineComponent({
   },
 
   beforeUnmount() {
+    if (!this.editor) return;
+
     this.editor.destroy();
   },
 });
