@@ -8,6 +8,7 @@
     class="pb-select"
     data-test="pb-select"
     :class="{ error: error }"
+    :disabled="disabled"
   >
     <slot />
   </select>
@@ -24,6 +25,9 @@ const props = defineProps({
   modelValue: {
     type: String,
     required: true,
+  },
+  disabled: {
+    type: Boolean,
   },
   error: {
     type: Boolean,

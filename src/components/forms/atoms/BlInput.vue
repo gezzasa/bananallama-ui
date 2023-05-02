@@ -5,6 +5,7 @@
     class="pb-input"
     data-test="pb-input"
     :class="{ error: error }"
+    :disabled="disabled"
   >
 </template>
 
@@ -15,6 +16,9 @@ const props = defineProps({
   modelValue: {
     type: String,
     required: true,
+  },
+  disabled: {
+    type: Boolean,
   },
   error: {
     type: Boolean,
