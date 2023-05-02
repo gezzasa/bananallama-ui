@@ -1,3 +1,10 @@
+## [0.6.2](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.1...v0.6.2) (2023-05-02)
+
+
+### Bug Fixes
+
+* **disabled:** add disabled to input and select ([88a1a60](https://gitlab.com/bananallama/banallama-ui/commit/88a1a607fa1652eb23ffa2c637ac6be91767fa3d))
+
 ## [0.6.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.0...v0.6.1) (2023-04-21)
 
 
