@@ -1,3 +1,7 @@
 # Ballama Ui
 
-TODO Update readme
+## Install
+
+```
+npm run install
+```
