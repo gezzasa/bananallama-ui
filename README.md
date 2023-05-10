@@ -1,7 +1,13 @@
 # Ballama Ui
 
-## Install
+### Install
 
 ```
 npm run install
+```
+
+### Lint
+
+```
+npm run lint
 ```
