@@ -22,4 +22,14 @@ describe('input unit tests', () => {
     expect(input.exists()).toBe(true);
     expect(input.element.value).toBe(testData.value);
   });
+
+  it('input triggers emit on input', async () => {
+    const wrapper = createWrapper();
+    const input = wrapper.find("[data-test='pb-input']");
+
+    await input.setValue('Testing');
+    await wrapper.vm.$nextTick();
+
+    expect(wrapper.emitted()['update:modelValue'][0][0]).toBe('Testing');
+  });
 });
