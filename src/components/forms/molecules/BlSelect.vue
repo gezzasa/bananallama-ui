@@ -25,7 +25,7 @@
     <p
       v-for="error of errors"
       :key="error.$uid"
-      class="bl-select__error"
+      class="bl-error bl-select__error"
     >
       {{ error.$message }}
     </p>

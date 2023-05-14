@@ -1,7 +1,9 @@
+<!-- eslint-disable vuejs-accessibility/form-control-has-label -->
 <template>
   <input
     v-bind="$attrs"
     v-model="computedValue"
+    :type="type"
     class="pb-input"
     data-test="pb-input"
     :class="{ error: error }"
@@ -16,6 +18,10 @@ const props = defineProps({
   modelValue: {
     type: String,
     required: true,
+  },
+  type: {
+    type: String,
+    default: 'text',
   },
   disabled: {
     type: Boolean,

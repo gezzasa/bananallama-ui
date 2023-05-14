@@ -1,6 +1,7 @@
 <template>
   <option
     class="pb-option"
+    data-test="pb-option"
     :value="option"
   >
     <slot>{{ option }}</slot>
