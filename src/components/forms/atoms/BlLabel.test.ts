@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import BlInputLabel from './BlInputLabel.vue';
+import BlLabel from './BlLabel.vue';
 import { describe, it, expect } from 'vitest';
 
 const testData = {
@@ -8,7 +8,7 @@ const testData = {
 };
 
 const createWrapper = () => {
-  return mount(BlInputLabel, {
+  return mount(BlLabel, {
     props: {
       modelValue: testData.value,
       isFor: testData.for,

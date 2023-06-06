@@ -1,5 +1,5 @@
 <template>
-  <BlInputLabel
+  <BlLabel
     v-if="label"
     :is-for="id"
     class-name="bl-select-group"
@@ -29,13 +29,13 @@
     >
       {{ error.$message }}
     </p>
-  </BlInputLabel>
+  </BlLabel>
 </template>
 
 <script setup lang="ts">
 import { PropType, toRefs } from 'vue';
 import BlSelect from '../atoms/BlSelect.vue';
-import BlInputLabel from '../atoms/BlInputLabel.vue';
+import BlLabel from '../atoms/BlLabel.vue';
 import BlOption from '../atoms/BlOption.vue';
 
 const props = defineProps({

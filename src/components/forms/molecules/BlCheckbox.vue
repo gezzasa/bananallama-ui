@@ -1,5 +1,5 @@
 <template>
-  <BlInputLabel
+  <BlLabel
     :is-for="id"
     class-name="bl-checkbox-group"
   >
@@ -23,12 +23,12 @@
     >
       {{ error.$message }}
     </p>
-  </BlInputLabel>
+  </BlLabel>
 </template>
 
 <script setup lang="ts">
 import BlCheckbox from '../atoms/BlCheckbox.vue';
-import BlInputLabel from '../atoms/BlInputLabel.vue';
+import BlLabel from '../atoms/BlLabel.vue';
 
 defineProps({
   label: {
