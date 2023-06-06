@@ -1,3 +1,10 @@
+## [0.6.4](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.3...v0.6.4) (2023-06-06)
+
+
+### Bug Fixes
+
+* rename components ([f5d7219](https://gitlab.com/bananallama/banallama-ui/commit/f5d7219be9b7fcca6884af8006825830529541cd))
+
 ## [0.6.3](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.2...v0.6.3) (2023-06-06)
 
 
