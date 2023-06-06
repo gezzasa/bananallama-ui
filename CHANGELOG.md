@@ -1,3 +1,10 @@
+## [0.6.3](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.2...v0.6.3) (2023-06-06)
+
+
+### Bug Fixes
+
+* add test ([a1f5ed0](https://gitlab.com/bananallama/banallama-ui/commit/a1f5ed055ce2d55b41778914f44e49813cbbbcbc))
+
 ## [0.6.2](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.1...v0.6.2) (2023-05-02)
 
 
