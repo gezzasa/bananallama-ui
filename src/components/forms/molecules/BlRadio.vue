@@ -1,5 +1,5 @@
 <template>
-  <BlInputLabel
+  <BlLabel
     v-if="label"
     :is-for="id"
     class-name="bl-radio-group"
@@ -23,12 +23,12 @@
     >
       {{ error.$message }}
     </p>
-  </BlInputLabel>
+  </BlLabel>
 </template>
 
 <script setup lang="ts">
 import { PropType, toRefs, computed, defineEmits } from 'vue';
-import BlInputLabel from '../atoms/BlInputLabel.vue';
+import BlLabel from '../atoms/BlLabel.vue';
 import BlInput from '../atoms/BlInput.vue';
 
 const props = defineProps({
