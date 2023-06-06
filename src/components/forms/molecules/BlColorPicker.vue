@@ -1,5 +1,5 @@
 <template>
-  <BlInputGroup
+  <BlInput
     id="element-color"
     v-model="computedValue"
     :label="label"
@@ -8,7 +8,7 @@
 </template>
 <script setup lang="ts">
 import { toRefs, computed } from 'vue';
-import BlInputGroup from './BlInputGroup.vue';
+import BlInput from './BlInput.vue';
 
 
 const props = defineProps({
