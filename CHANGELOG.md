@@ -1,3 +1,10 @@
+## [0.6.6](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.5...v0.6.6) (2023-06-08)
+
+
+### Bug Fixes
+
+* update vite ([7e7ffec](https://gitlab.com/bananallama/banallama-ui/commit/7e7ffec33d9f4767b684c7b7c31e377da4c53353))
+
 ## [0.6.5](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.4...v0.6.5) (2023-06-08)
 
 
