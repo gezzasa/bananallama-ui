@@ -1,3 +1,10 @@
+## [0.6.5](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.4...v0.6.5) (2023-06-08)
+
+
+### Bug Fixes
+
+* add tippy dependency ([44ff7fa](https://gitlab.com/bananallama/banallama-ui/commit/44ff7faf3e9d3bd9b461932bd291f1033e3bb8c5))
+
 ## [0.6.4](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.3...v0.6.4) (2023-06-06)
 
 
