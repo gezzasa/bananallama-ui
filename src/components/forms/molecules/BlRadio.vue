@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { PropType, toRefs, computed, defineEmits } from 'vue';
+import { PropType, toRefs, computed } from 'vue';
 import BlLabel from '../atoms/BlLabel.vue';
 import BlInput from '../atoms/BlInput.vue';
 
