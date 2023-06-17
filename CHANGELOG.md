@@ -1,3 +1,15 @@
+## [0.7.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.6...v0.7.0) (2023-06-17)
+
+
+### Features
+
+* add textarea ([d9a537d](https://gitlab.com/bananallama/banallama-ui/commit/d9a537d3093e938e24e10eed914907f1faad01e5))
+
+
+### Bug Fixes
+
+* update packages ([1eef761](https://gitlab.com/bananallama/banallama-ui/commit/1eef761533ddcb25057ad34f42e171867271531b))
+
 ## [0.6.6](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.5...v0.6.6) (2023-06-08)
 
 
