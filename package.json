@@ -31,10 +31,10 @@
     "@tiptap/extension-text-style": "2.0.0-beta.220",
     "@tiptap/suggestion": "2.0.0-beta.220",
     "@tiptap/vue-3": "2.0.0-beta.220",
-    "@vitejs/plugin-vue": "4.1.0",
+    "@vitejs/plugin-vue": "4.2.3",
     "tippy.js": "6.3.7",
     "vite": "4.3.9",
-    "vue": "3.2.47"
+    "vue": "3.3.4"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "1.2.0",
@@ -43,8 +43,8 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "9.0.2",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "@vitest/coverage-c8": "0.26.3",
-    "@vitest/ui": "0.26.3",
+    "@vitest/coverage-c8": "0.32.2",
+    "@vitest/ui": "0.32.2",
     "@vue/eslint-config-prettier": "7.0.0",
     "@vue/eslint-config-typescript": "11.0.2",
     "@vue/test-utils": "2.3.2",
@@ -52,7 +52,7 @@
     "eslint": "7.32.0",
     "eslint-plugin-vuejs-accessibility": "1.2.0",
     "jsdom": "21.1.1",
-    "vitest": "0.29.7"
+    "vitest": "0.32.2"
   },
   "author": "",
   "license": "ISC"
