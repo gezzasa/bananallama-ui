@@ -2,19 +2,19 @@
   <p
     v-for="error of errors"
     :key="error"
-    class="bl-error bl-radio__error"
+    class="bl-error"
   >
-    {{ error }}
+    {{ error.message }}
   </p>
 </template>
 <script lang="ts" setup>
-
-type ErrorSchema = string[]
+import { PropType } from 'vue';
+import type { FormError } from '@/types/global';
 
 const props = defineProps({
   errors: {
-    type: Array,
-    default: () => [],
+    type: Array as PropType<FormError[]>,
+    default: () => []
   },
 });
 </script>

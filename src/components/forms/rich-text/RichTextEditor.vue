@@ -7,7 +7,7 @@
     />
     <editor-content
       id="rich-text-editor"
-      class="pb-rich-text"
+      class="bl-rich-text"
       :editor="editor"
     />
   </div>
@@ -65,7 +65,7 @@ export default defineComponent({
   setup(props, { emit }) {
     const mention = Mention.configure({
       HTMLAttributes: {
-        class: 'pb-mention',
+        class: 'bl-mention',
       },
       renderLabel({ node }) {
         return `{${node.attrs.label ?? node.attrs.id}}`;
@@ -141,25 +141,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-.pb-rich-text {
-  width: 100%;
-  border: 1px solid var(--input-border);
-  margin: 16px 0;
-
-  .ProseMirror {
-    padding: 16px;
-  }
-}
-
-.is-active {
-  font-weight: bold;
-}
-
-.pb-mention {
-  padding: 4px;
-  border-radius: 4px;
-  background-color: #c3c3c3;
-}
-</style>

@@ -12,13 +12,7 @@
       v-bind="$attrs"
       :error="!!errors.length"
     />
-    <p
-      v-for="error of errors"
-      :key="error.$uid"
-      class="bl-error bl-input__error"
-    >
-      {{ error.$message }}
-    </p>
+    <BlError :errors="errors" />
   </BlLabel>
 </template>
 
@@ -26,6 +20,7 @@
 import { toRefs } from 'vue';
 import BlInput from '../atoms/BlInput.vue';
 import BlLabel from '../atoms/BlLabel.vue';
+import BlError from '../atoms/BlError.vue';
 
 const props = defineProps({
   label: {
@@ -44,7 +39,3 @@ const props = defineProps({
 
 const { label, id, errors } = toRefs(props);
 </script>
-
-<style lang="scss">
-@import '../../../styles/index.scss';
-</style>
