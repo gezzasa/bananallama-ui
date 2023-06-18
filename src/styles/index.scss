@@ -1,5 +1,6 @@
 :root {
   --bl-color-text: #222222;
+  --bl-color__error: #ff3333;
 
   --bl-font-family: inherit;
 
@@ -18,13 +19,18 @@
   --bl-input-border-radius: 4px;
   --bl-input-border-size: 1px;
   --bl-input-border-style: solid;
+  --bl-rich-text__border: gray;
   --bl-input-border-color: #cecece;
   --bl-input-box-shadow: inset 0 1px 3px #ddd;
   --bl-input-group-display: grid;
+
   --bl-checkbox-group-display: block;
   --bl-checkbox-group-margin: var(--bl-spacing-md) 0;
+
   --bl-grid-display: grid;
   --bl-grid-gap: var(--bl-spacing-md);
+
+  --bl-error__margin: 4px 0 16px;
 }
 
 .bl-input__label-copy,
@@ -32,8 +38,8 @@
   color: var(--bl-color-text);
 }
 
-.pb-select,
-.pb-input {
+.bl-select,
+.bl-input {
   padding: var(--bl-input-padding);
   font-size: var(--bl-input-font-size);
   border-radius: var(--bl-input-border-radius);
@@ -61,4 +67,59 @@
 .bl-grid {
   display: var(--bl-grid-display);
   gap: var(--bl-grid-gap);
+}
+
+.bl-error {
+  margin: var(--bl-error__margin);
+  color: var(--bl-color__error);
+}
+
+.bl-input-error {
+  border-color: var(--bl-color__error)
+}
+
+.bl-rich-text {
+  width: 100%;
+  border: 1px solid var(--bl-rich-text__border);
+  margin: 16px 0;
+
+  .ProseMirror {
+    padding: 16px;
+  }
+}
+
+.bl__is-active {
+  font-weight: bold;
+}
+
+.bl-mention {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #c3c3c3;
+}
+
+.bl-mention__items {
+  padding: 0.2rem;
+  position: relative;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  font-size: 0.9rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bl-mention__item {
+  display: block;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border-radius: 0.4rem;
+  border: 1px solid transparent;
+  padding: 0.2rem 0.4rem;
+
+  &.is-selected {
+    border-color: #000;
+  }
 }

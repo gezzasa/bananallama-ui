@@ -39,7 +39,3 @@ const props = defineProps({
 
 const { label, id, errors } = toRefs(props);
 </script>
-
-<style lang="scss">
-@import '../../../styles/index.scss';
-</style>

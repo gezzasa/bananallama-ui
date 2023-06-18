@@ -2,8 +2,8 @@
 
 <template>
   <label
-    class="pb-input__label"
-    data-test="pb-input__label"
+    class="bl-input__label"
+    data-test="bl-input__label"
     :class="className"
     :for="isFor"
   >

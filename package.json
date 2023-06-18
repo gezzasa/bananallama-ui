@@ -11,7 +11,9 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "release:check": "npm run release -- --dry-run --debug",
-    "release": "npx semantic-release"
+    "release": "npx semantic-release",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@tiptap/extension-bold": "2.0.0-beta.220",
@@ -43,6 +45,13 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "9.0.2",
     "@semantic-release/release-notes-generator": "10.0.3",
+    "@storybook/addon-essentials": "^7.0.22",
+    "@storybook/addon-interactions": "^7.0.22",
+    "@storybook/addon-links": "^7.0.22",
+    "@storybook/blocks": "^7.0.22",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/vue3": "^7.0.22",
+    "@storybook/vue3-vite": "^7.0.22",
     "@vitest/coverage-c8": "0.32.2",
     "@vitest/ui": "0.32.2",
     "@vue/eslint-config-prettier": "7.0.0",
@@ -50,8 +59,11 @@
     "@vue/test-utils": "2.3.2",
     "conventional-changelog-conventionalcommits": "5.0.0",
     "eslint": "7.32.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "eslint-plugin-vuejs-accessibility": "1.2.0",
     "jsdom": "21.1.1",
+    "sass": "^1.63.4",
+    "storybook": "^7.0.22",
     "vitest": "0.32.2"
   },
   "author": "",

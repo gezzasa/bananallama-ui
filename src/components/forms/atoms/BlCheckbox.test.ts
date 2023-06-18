@@ -20,16 +20,16 @@ const createWrapper = () => {
 describe('checkbox unit tests', () => {
   it('displays a class and a style', async () => {
     const wrapper = createWrapper();
-    const checkbox = wrapper.find("[data-test='pb-checkbox']");
+    const checkbox = wrapper.find("[data-test='bl-checkbox']");
 
     expect(checkbox.exists()).toBe(true);
-    expect(checkbox.element.getAttribute('class')).toContain('pb-checkbox');
+    expect(checkbox.element.getAttribute('class')).toContain('bl-checkbox');
     expect(checkbox.element.getAttribute('style')).toContain('display: none;');
   });
 
   it('displays a label', async () => {
     const wrapper = createWrapper();
-    const checkbox = wrapper.find("[data-test='pb-checkbox']");
+    const checkbox = wrapper.find("[data-test='bl-checkbox']");
 
     expect(checkbox.element.checked).toBe(testData.modelValue);
     await checkbox.setChecked();

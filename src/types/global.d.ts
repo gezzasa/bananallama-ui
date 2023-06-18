@@ -1,4 +1,3 @@
-type VuelidateError = {
-  $uid: string
-  $message: string
+export type FormError = {
+  message: string
 }

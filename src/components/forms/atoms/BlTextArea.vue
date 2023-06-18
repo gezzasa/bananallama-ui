@@ -4,9 +4,9 @@
     v-bind="$attrs"
     v-model="computedValue"
     :type="type"
-    class="pb-text-area"
-    data-test="pb-text-area"
-    :class="{ error: error }"
+    class="bl-text-area"
+    data-test="bl-text-area"
+    :class="{ 'bl-input-error': error }"
     :disabled="disabled"
   />
 </template>

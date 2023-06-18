@@ -17,7 +17,7 @@ const createWrapper = () => {
 describe('text-area unit tests', () => {
   it('text-area exists and has a value', () => {
     const wrapper = createWrapper();
-    const input = wrapper.find("[data-test='pb-text-area']");
+    const input = wrapper.find("[data-test='bl-text-area']");
 
     expect(input.exists()).toBe(true);
     expect(input.element.value).toBe(testData.value);
@@ -25,7 +25,7 @@ describe('text-area unit tests', () => {
 
   it('textarea triggers emit on input', async () => {
     const wrapper = createWrapper();
-    const input = wrapper.find("[data-test='pb-text-area']");
+    const input = wrapper.find("[data-test='bl-text-area']");
 
     await input.setValue('Testing');
     await wrapper.vm.$nextTick();

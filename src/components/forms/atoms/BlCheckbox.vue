@@ -5,9 +5,9 @@
     v-bind="$attrs"
     v-model="computedValue"
     type="checkbox"
-    class="pb-checkbox"
-    data-test="pb-checkbox"
-    :class="{ error: error }"
+    class="bl-checkbox"
+    data-test="bl-checkbox"
+    :class="{ 'bl-input-error': error }"
   >
 </template>
 
