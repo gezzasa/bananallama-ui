@@ -19,10 +19,10 @@ const createWrapper = () => {
 describe('label unit tests', () => {
   it('label exists and has a class', () => {
     const wrapper = createWrapper();
-    const label = wrapper.find("[data-test='pb-input__label']");
+    const label = wrapper.find("[data-test='bl-input__label']");
 
     expect(label.exists()).toBe(true);
-    expect(label.element.getAttribute('class')).toContain('pb-input__label');
+    expect(label.element.getAttribute('class')).toContain('bl-input__label');
     expect(label.element.getAttribute('for')).toContain('forElement');
   });
 });

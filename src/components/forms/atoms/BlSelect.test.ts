@@ -25,17 +25,17 @@ const createWrapper = () => {
 describe('select unit tests', () => {
   it('select exists and has class and id', () => {
     const wrapper = createWrapper();
-    const select = wrapper.find("[data-test='pb-select']");
+    const select = wrapper.find("[data-test='bl-select']");
 
     expect(select.exists()).toBe(true);
     expect(wrapper.vm.modelValue).toBe('10px');
-    expect(select.element.getAttribute('class')).toContain('pb-select');
+    expect(select.element.getAttribute('class')).toContain('bl-select');
     expect(select.element.getAttribute('id')).toContain('test-id');
   });
 
   it('select has slot which changes value', async () => {
     const wrapper = createWrapper();
-    const select = wrapper.find("[data-test='pb-select']");
+    const select = wrapper.find("[data-test='bl-select']");
     const options = wrapper.findAll('option');
 
     await options.at(0)?.setSelected();

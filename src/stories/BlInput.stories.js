@@ -10,13 +10,13 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Vanilla = {
   args: {
-    id: "1234",
-    label: "Input label",
-    modelValue: "Input content",
+    id: '1234',
+    label: 'Input label',
+    modelValue: 'Input content',
     errors: [
       {
-        message: "Not enough characters"
-      }
-    ]
+        message: 'Not enough characters',
+      },
+    ],
   },
 };

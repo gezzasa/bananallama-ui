@@ -17,7 +17,7 @@ const createWrapper = () => {
 describe('input unit tests', () => {
   it('input exists and has a value', () => {
     const wrapper = createWrapper();
-    const input = wrapper.find("[data-test='pb-input']");
+    const input = wrapper.find("[data-test='bl-input']");
 
     expect(input.exists()).toBe(true);
     expect(input.element.value).toBe(testData.value);
@@ -25,7 +25,7 @@ describe('input unit tests', () => {
 
   it('input triggers emit on input', async () => {
     const wrapper = createWrapper();
-    const input = wrapper.find("[data-test='pb-input']");
+    const input = wrapper.find("[data-test='bl-input']");
 
     await input.setValue('Testing');
     await wrapper.vm.$nextTick();

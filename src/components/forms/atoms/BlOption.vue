@@ -1,7 +1,7 @@
 <template>
   <option
-    class="pb-option"
-    data-test="pb-option"
+    class="bl-option"
+    data-test="bl-option"
     :value="option"
   >
     <slot>{{ option }}</slot>

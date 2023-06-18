@@ -5,9 +5,9 @@
     :id="id"
     v-model="computedValue"
     :name="id"
-    class="pb-select"
-    data-test="pb-select"
-    :class="{ error: error }"
+    class="bl-select"
+    data-test="bl-select"
+    :class="{ 'bl-input-error': error }"
     :disabled="disabled"
   >
     <slot />

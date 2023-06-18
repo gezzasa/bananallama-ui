@@ -1,8 +1,8 @@
 <template>
   <button
-    class="pb-button"
+    class="bl-button"
     :type="type"
-    data-test="pb-button"
+    data-test="bl-button"
     v-bind="$attrs"
   >
     <slot>{{ label }}</slot>

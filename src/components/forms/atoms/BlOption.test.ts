@@ -17,11 +17,11 @@ const createWrapper = () => {
 describe('option unit tests', () => {
   it('option exists and has class, value and text', () => {
     const wrapper = createWrapper();
-    const option = wrapper.find("[data-test='pb-option']");
+    const option = wrapper.find("[data-test='bl-option']");
 
     expect(option.exists()).toBe(true);
     expect(option.text()).toBe('10px');
     expect(option.element.getAttribute('value')).toBe('10px');
-    expect(option.element.getAttribute('class')).toContain('pb-option');
+    expect(option.element.getAttribute('class')).toContain('bl-option');
   });
 });

@@ -38,8 +38,8 @@
   color: var(--bl-color-text);
 }
 
-.pb-select,
-.pb-input {
+.bl-select,
+.bl-input {
   padding: var(--bl-input-padding);
   font-size: var(--bl-input-font-size);
   border-radius: var(--bl-input-border-radius);
@@ -72,6 +72,10 @@
 .bl-error {
   margin: var(--bl-error__margin);
   color: var(--bl-color__error);
+}
+
+.bl-input-error {
+  border-color: var(--bl-color__error)
 }
 
 .bl-rich-text {

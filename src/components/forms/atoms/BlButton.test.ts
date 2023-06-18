@@ -22,11 +22,11 @@ const createWrapper = () => {
 describe('button unit tests', () => {
   it('displays a label, class, type and style', () => {
     const wrapper = createWrapper();
-    const button = wrapper.find("[data-test='pb-button']");
+    const button = wrapper.find("[data-test='bl-button']");
 
     expect(button.exists()).toBe(true);
     expect(button.text()).toContain(testData.label);
-    expect(button.element.getAttribute('class')).toContain('pb-button');
+    expect(button.element.getAttribute('class')).toContain('bl-button');
     expect(button.element.getAttribute('type')).toContain('submit');
     expect(button.element.getAttribute('style')).toContain('display: none;');
   });
