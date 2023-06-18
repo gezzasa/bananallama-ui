@@ -3,7 +3,3 @@
     <slot />
   </div>
 </template>
-
-<style>
-@import '../../styles/index.scss';
-</style>
