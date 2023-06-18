@@ -3,6 +3,7 @@
     v-for="error of errors"
     :key="error"
     class="bl-error"
+    data-test="bl-error"
   >
     {{ error.message }}
   </p>
