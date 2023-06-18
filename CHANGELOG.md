@@ -1,3 +1,10 @@
+## [0.7.2](https://gitlab.com/bananallama/banallama-ui/compare/v0.7.1...v0.7.2) (2023-06-18)
+
+
+### Bug Fixes
+
+* remove scss import from grid ([fce9227](https://gitlab.com/bananallama/banallama-ui/commit/fce9227175817793f65e366c41d55ba27ad304bd))
+
 ## [0.7.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.7.0...v0.7.1) (2023-06-18)
 
 
