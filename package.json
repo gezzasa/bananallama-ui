@@ -1,6 +1,6 @@
 {
   "name": "bananallama-ui",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Simple Ui Library",
   "main": "src/components/index.ts",
   "scripts": {

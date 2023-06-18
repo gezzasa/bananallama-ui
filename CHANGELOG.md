@@ -1,3 +1,10 @@
+## [0.7.1](https://gitlab.com/bananallama/banallama-ui/compare/v0.7.0...v0.7.1) (2023-06-18)
+
+
+### Bug Fixes
+
+* move styles out of components ([ac9e5b7](https://gitlab.com/bananallama/banallama-ui/commit/ac9e5b7c71d3acfc0fc0c591057ea94b18aaaf8d))
+
 ## [0.7.0](https://gitlab.com/bananallama/banallama-ui/compare/v0.6.6...v0.7.0) (2023-06-17)
 
 
