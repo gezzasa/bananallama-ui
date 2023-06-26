@@ -19,7 +19,6 @@
   --bl-input-border-radius: 4px;
   --bl-input-border-size: 1px;
   --bl-input-border-style: solid;
-  --bl-rich-text__border: gray;
   --bl-input-border-color: #cecece;
   --bl-input-box-shadow: inset 0 1px 3px #ddd;
   --bl-input-group-display: grid;
@@ -39,7 +38,8 @@
 }
 
 .bl-select,
-.bl-input {
+.bl-input,
+.bl-text-area {
   padding: var(--bl-input-padding);
   font-size: var(--bl-input-font-size);
   border-radius: var(--bl-input-border-radius);
@@ -49,7 +49,8 @@
 
 .bl-checkbox-group,
 .bl-input-group,
-.bl-select-group {
+.bl-select-group,
+.bl-text-area {
   font-family: var(--bl-font-family);
 }
 
@@ -80,7 +81,10 @@
 
 .bl-rich-text {
   width: 100%;
-  border: 1px solid var(--bl-rich-text__border);
+  font-size: var(--bl-input-font-size);
+  border-radius: var(--bl-input-border-radius);
+  border: var(--bl-input-border-size) var(--bl-input-border-style) var(--bl-input-border-color);
+  box-shadow: var(--bl-input-box-shadow);
   margin: 16px 0;
 
   .ProseMirror {

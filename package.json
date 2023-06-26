@@ -13,7 +13,9 @@
     "release:check": "npm run release -- --dry-run --debug",
     "release": "npx semantic-release",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "start": "npm run storybook",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@tiptap/extension-bold": "2.0.0-beta.220",
@@ -64,8 +66,16 @@
     "jsdom": "21.1.1",
     "sass": "^1.63.4",
     "storybook": "^7.0.22",
-    "vitest": "0.32.2"
+    "vitest": "0.32.2",
+    "semantic-release": "^21.0.5"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gezzasa/bananallama-ui.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
 }
