@@ -1,3 +1,10 @@
+## [0.7.4](https://github.com/gezzasa/bananallama-ui/compare/v0.7.3...v0.7.4) (2023-06-26)
+
+
+### Bug Fixes
+
+* force release ([9eb070d](https://github.com/gezzasa/bananallama-ui/commit/9eb070d2d47e26af2ee04e61bd440558e37a26f2))
+
 ## [0.7.3](https://github.com/gezzasa/bananallama-ui/compare/v0.7.2...v0.7.3) (2023-06-26)
 
 
