@@ -3,6 +3,7 @@
   "version": "0.7.24",
   "description": "A simple Vue 3 UI Library",
   "main": "src/components/index.ts",
+  "homepage": "https://gezzasa.github.io/bananallama-ui",
   "scripts": {
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore src",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
@@ -11,7 +12,9 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
+    "predeploy": "npm run build-storybook",
     "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "start": "npm run storybook"
   },
   "dependencies": {
@@ -60,11 +63,12 @@
     "eslint": "7.32.0",
     "eslint-plugin-storybook": "^0.6.12",
     "eslint-plugin-vuejs-accessibility": "1.2.0",
+    "gh-pages": "^5.0.0",
     "jsdom": "21.1.1",
     "sass": "^1.63.4",
+    "semantic-release": "21.0.7",
     "storybook": "^7.0.22",
-    "vitest": "0.32.2",
-    "semantic-release": "21.0.7"
+    "vitest": "0.32.2"
   },
   "author": "",
   "license": "ISC",
