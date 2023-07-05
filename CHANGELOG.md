@@ -1,3 +1,10 @@
+## [0.7.24](https://github.com/gezzasa/bananallama-ui/compare/v0.7.23...v0.7.24) (2023-07-05)
+
+
+### Bug Fixes
+
+* change to error components ([74ab006](https://github.com/gezzasa/bananallama-ui/commit/74ab00694503b421897794a17780b9cf687638d6))
+
 ## 0.7.4 - 0.7.23
 
 * force version release
