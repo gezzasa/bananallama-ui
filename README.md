@@ -1,7 +1,11 @@
 # Ballama Ui
 
+```javascript
+npm i bananallama-ui
+```
+
 ## Description
-A simply UI library with customizable styles
+A simple Vue 3 UI Library with customizable styles
 
 ## Features
 The following elements are available to use
