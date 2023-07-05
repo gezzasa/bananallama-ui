@@ -73,6 +73,6 @@
     "url": "https://github.com/gezzasa/bananallama-ui.git"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }
