@@ -8,18 +8,21 @@
     <editor-content
       id="rich-text-editor"
       class="bl-rich-text"
+      :class="{ 'bl-input-error': !!errors.length }"
       :editor="editor"
     />
+    <BlError :errors="errors" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { PropType, defineComponent } from 'vue';
 import { useEditor, EditorContent } from '@tiptap/vue-3';
 import Bold from '@tiptap/extension-bold';
 import { Color } from '@tiptap/extension-color';
 import Heading from '@tiptap/extension-heading';
 import Italic from '@tiptap/extension-italic';
+import BlError from '../atoms/BlError.vue';
 import ListItem from '@tiptap/extension-list-item';
 import BulletList from '@tiptap/extension-bullet-list';
 import OrderedList from '@tiptap/extension-ordered-list';
@@ -34,11 +37,13 @@ import HardBreak from '@tiptap/extension-hard-break';
 
 import RichTextEditorMenu from './RichTextEditorMenu.vue';
 import suggestion from './suggestion';
+import { FormError } from '@/types/global';
 
 export default defineComponent({
   components: {
     EditorContent,
     RichTextEditorMenu,
+    BlError,
   },
 
   props: {
@@ -57,6 +62,10 @@ export default defineComponent({
     suggestionCharacter: {
       type: String,
       default: null,
+    },
+    errors: {
+      type: Array as PropType<FormError[]>,
+      default: () => [],
     },
   },
 

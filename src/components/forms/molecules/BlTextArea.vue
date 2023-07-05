@@ -17,10 +17,11 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from 'vue';
+import { toRefs, type PropType } from 'vue';
 import BlTextArea from '../atoms/BlTextArea.vue';
 import BlLabel from '../atoms/BlLabel.vue';
 import BlError from '../atoms/BlError.vue';
+import { FormError } from '@/types/global';
 
 const props = defineProps({
   label: {
@@ -32,7 +33,7 @@ const props = defineProps({
     default: '',
   },
   errors: {
-    type: Array,
+    type: Array as PropType<FormError[]>,
     default: () => [],
   },
 });

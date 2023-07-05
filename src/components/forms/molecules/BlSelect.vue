@@ -22,21 +22,18 @@
       </slot>
       <slot name="additional-options-after" />
     </BlSelect>
-    <p
-      v-for="error of errors"
-      :key="error.$uid"
-      class="bl-error bl-select__error"
-    >
-      {{ error.$message }}
-    </p>
+    <BlError :errors="errors" />
   </BlLabel>
 </template>
 
 <script setup lang="ts">
-import { PropType, toRefs } from 'vue';
+import type { PropType } from 'vue';
+import type { FormError } from '@/types/global';
+import { toRefs } from 'vue';
 import BlSelect from '../atoms/BlSelect.vue';
 import BlLabel from '../atoms/BlLabel.vue';
 import BlOption from '../atoms/BlOption.vue';
+import BlError from '../atoms/BlError.vue';
 
 const props = defineProps({
   label: {
@@ -52,7 +49,7 @@ const props = defineProps({
     default: null,
   },
   errors: {
-    type: Array as PropType<Object[]>,
+    type: Array as PropType<FormError[]>,
     default: () => [],
   },
 });
