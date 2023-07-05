@@ -67,7 +67,7 @@
     "sass": "^1.63.4",
     "storybook": "^7.0.22",
     "vitest": "0.32.2",
-    "semantic-release": "^21.0.5"
+    "semantic-release": "21.0.7"
   },
   "author": "",
   "license": "ISC",
