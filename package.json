@@ -10,12 +10,9 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
-    "release:check": "npm run release -- --dry-run --debug",
-    "release": "npx semantic-release",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "start": "npm run storybook",
-    "semantic-release": "semantic-release"
+    "start": "npm run storybook"
   },
   "dependencies": {
     "@tiptap/extension-bold": "2.0.0-beta.220",
