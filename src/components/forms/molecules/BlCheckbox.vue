@@ -16,18 +16,15 @@
     >
       <slot name="label">{{ label }}</slot>
     </span>
-    <p
-      v-for="error of errors"
-      :key="error.$uid"
-      class="bl-input__error"
-    >
-      {{ error.$message }}
-    </p>
+    <BlError :errors="errors" />
   </BlLabel>
 </template>
 
 <script setup lang="ts">
+import type { PropType } from 'vue';
+import type { FormError } from '@/types/global';
 import BlCheckbox from '../atoms/BlCheckbox.vue';
+import BlError from '../atoms/BlError.vue';
 import BlLabel from '../atoms/BlLabel.vue';
 
 defineProps({
@@ -40,7 +37,7 @@ defineProps({
     default: '',
   },
   errors: {
-    type: Array,
+    type: Array as PropType<FormError[]>,
     default: () => [],
   },
 });
