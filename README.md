@@ -1,11 +1,11 @@
-# Ballama Ui
+# BananaLlama Ui
 
 ```javascript
 npm i bananallama-ui
 ```
 
 ## Description
-A simple Vue 3 UI Library with customizable styles
+A simple and accessible Vue 3 UI Library with customizable styles
 
 ## Features
 The following elements are available to use
@@ -17,8 +17,21 @@ The following elements are available to use
 - Textarea
 - Color picker
 
+## Storybook
+The Components can be viewed [here](https://bananallama-ui.vercel.app)
+
 ## Usage
-1. Import the element you would like to use
+
+### Styles
+The default styles can be used by importing the following
+
+### Elements
+
+```javascript
+import 'bananallama-ui/src/styles/index.scss';
+```
+
+Import the element you would like to use
 
 ```javascript
 import { BlInput } from 'bananallama-ui';
@@ -43,17 +56,4 @@ const errors: [
     message: "Some error from the BE perhaps"
   }
 ]
-```
-
-## Storybook
-### Install
-
-```
-npm run install
-```
-
-### Run Storybook
-
-```
-npm start
 ```

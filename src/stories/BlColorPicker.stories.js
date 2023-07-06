@@ -1,22 +1,17 @@
-import BlInput from '../components/forms/molecules/BlInput.vue';
+import BlColorPicker from '../components/forms/molecules/BlColorPicker.vue';
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 export default {
-  title: 'Forms/BlInput',
-  component: BlInput,
+  title: 'Forms/BlColorPicker',
+  component: BlColorPicker,
   tags: ['autodocs'],
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Vanilla = {
   args: {
-    id: 'input-id',
-    label: 'Input label',
-    modelValue: 'Input content',
-    errors: [
-      {
-        message: 'Not enough characters',
-      },
-    ],
+    id: 'color-picker-id',
+    label: 'Color picker label',
+    modelValue: '#cecece',
   },
 };

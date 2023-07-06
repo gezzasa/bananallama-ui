@@ -10,8 +10,8 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Vanilla = {
   args: {
-    label: 'Input label',
-    modelValue: 'Input content',
+    label: 'Rich text label',
+    modelValue: 'Rich text content',
     suggestions: ['test', 'longer test'],
     suggestionCharacter: '{',
   },

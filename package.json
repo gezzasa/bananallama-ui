@@ -14,7 +14,6 @@
     "storybook": "storybook dev -p 6006",
     "predeploy": "npm run build-storybook",
     "build-storybook": "storybook build",
-    "deploy-storybook": "gh-pages -d storybook-static",
     "start": "npm run storybook"
   },
   "dependencies": {
@@ -63,7 +62,6 @@
     "eslint": "7.32.0",
     "eslint-plugin-storybook": "^0.6.12",
     "eslint-plugin-vuejs-accessibility": "1.2.0",
-    "gh-pages": "^5.0.0",
     "jsdom": "21.1.1",
     "sass": "^1.63.4",
     "semantic-release": "21.0.7",
