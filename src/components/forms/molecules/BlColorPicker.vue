@@ -1,22 +1,24 @@
 <template>
   <BlInput
-    id="element-color"
-    v-model="computedValue"
+    :id="id"
+    class="bl-color-picker"
+    v-bind="$attrs"
+    type="color"
     :label="label"
-    :error="errors"
+    :errors="errors"
   />
 </template>
 <script setup lang="ts">
-import { toRefs, computed } from 'vue';
+import { toRefs } from 'vue';
 import BlInput from './BlInput.vue';
 
 
 const props = defineProps({
-  label: {
+  id: {
     type: String,
-    required: true,
+    default: '',
   },
-  modelValue: {
+  label: {
     type: String,
     required: true,
   },
@@ -26,16 +28,5 @@ const props = defineProps({
   },
 });
 
-const { label, modelValue, errors } = toRefs(props);
-
-const emit = defineEmits(['update:modelValue']);
-
-const computedValue = computed({
-  get() {
-    return modelValue.value;
-  },
-  set(value: Object) {
-    emit('update:modelValue', value);
-  },
-});
+const { label, errors } = toRefs(props);
 </script>

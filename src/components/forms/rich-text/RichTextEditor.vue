@@ -37,7 +37,7 @@ import HardBreak from '@tiptap/extension-hard-break';
 
 import RichTextEditorMenu from './RichTextEditorMenu.vue';
 import suggestion from './suggestion';
-import { FormError } from '@/types/global';
+import { BlFormError } from '@/types/global';
 
 export default defineComponent({
   components: {
@@ -64,7 +64,7 @@ export default defineComponent({
       default: null,
     },
     errors: {
-      type: Array as PropType<FormError[]>,
+      type: Array as PropType<BlFormError[]>,
       default: () => [],
     },
   },

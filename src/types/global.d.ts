@@ -1,3 +1,3 @@
-export type FormError = {
+export type BlFormError = {
   message: string
 }

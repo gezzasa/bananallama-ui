@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import type { FormError } from '@/types/global';
+import type { BlFormError } from '@/types/global';
 import { toRefs } from 'vue';
 import BlSelect from '../atoms/BlSelect.vue';
 import BlLabel from '../atoms/BlLabel.vue';
@@ -49,7 +49,7 @@ const props = defineProps({
     default: null,
   },
   errors: {
-    type: Array as PropType<FormError[]>,
+    type: Array as PropType<BlFormError[]>,
     default: () => [],
   },
 });

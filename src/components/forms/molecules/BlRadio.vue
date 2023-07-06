@@ -16,17 +16,13 @@
     <span class="bl-radio__label-copy">
       <slot name="label">{{ label }}</slot>
     </span>
-    <BlError :errors="errors" />
   </BlLabel>
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue';
-import type { FormError } from '@/types/global';
 import { toRefs, computed } from 'vue';
 import BlLabel from '../atoms/BlLabel.vue';
 import BlInput from '../atoms/BlInput.vue';
-import BlError from '../atoms/BlError.vue';
 
 const props = defineProps({
   label: {
@@ -49,13 +45,9 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  errors: {
-    type: Array as PropType<FormError[]>,
-    default: () => [],
-  },
 });
 
-const { label, id, modelValue, errors } = toRefs(props);
+const { label, id, modelValue } = toRefs(props);
 
 const emit = defineEmits(['update:modelValue']);
 

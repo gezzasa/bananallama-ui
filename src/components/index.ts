@@ -1,3 +1,5 @@
+export { default as BlError } from './forms/atoms/BlError.vue';
+
 export { default as BlCheckbox } from './forms/molecules/BlCheckbox.vue';
 export { default as BlColorPicker } from './forms/molecules/BlColorPicker.vue';
 export { default as BlInput } from './forms/molecules/BlInput.vue';

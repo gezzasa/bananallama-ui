@@ -21,7 +21,7 @@ import { toRefs, type PropType } from 'vue';
 import BlTextArea from '../atoms/BlTextArea.vue';
 import BlLabel from '../atoms/BlLabel.vue';
 import BlError from '../atoms/BlError.vue';
-import { FormError } from '@/types/global';
+import { BlFormError } from '@/types/global';
 
 const props = defineProps({
   label: {
@@ -33,7 +33,7 @@ const props = defineProps({
     default: '',
   },
   errors: {
-    type: Array as PropType<FormError[]>,
+    type: Array as PropType<BlFormError[]>,
     default: () => [],
   },
 });
