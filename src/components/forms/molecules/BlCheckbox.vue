@@ -8,7 +8,6 @@
       :id="id"
       v-bind="$attrs"
       type="checkbox"
-      :error="error"
     />
     <span
       v-if="label"
