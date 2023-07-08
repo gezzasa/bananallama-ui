@@ -1,3 +1,16 @@
+## [0.7.25](https://github.com/gezzasa/bananallama-ui/compare/v0.7.24...v0.7.25) (2023-07-08)
+
+
+### Bug Fixes
+
+* force release ([fc6ebcc](https://github.com/gezzasa/bananallama-ui/commit/fc6ebcc263561627e754ee4661e397f05d5591de))
+* force release ([6ddb4e9](https://github.com/gezzasa/bananallama-ui/commit/6ddb4e99e95375bbe649d861da050e7054f51569))
+* force release ([c5ac881](https://github.com/gezzasa/bananallama-ui/commit/c5ac881272d3f9dd7196c718f9b163ac19fbdc5c))
+* force release ([43027d0](https://github.com/gezzasa/bananallama-ui/commit/43027d07db12de52af318c553b179d4e73239b02))
+* force release ([93f8b5b](https://github.com/gezzasa/bananallama-ui/commit/93f8b5bf5d87fd5c7a11cbb2ddd59e5bc9631434))
+* rename types ([bc4d6f1](https://github.com/gezzasa/bananallama-ui/commit/bc4d6f10c530cb601fdf00be05440419eb6bbaec))
+* **stories:** update stories ([03e6a69](https://github.com/gezzasa/bananallama-ui/commit/03e6a690be96411b03dbb9acc0320e9ae4ac5e5c))
+
 ## [0.7.24](https://github.com/gezzasa/bananallama-ui/compare/v0.7.23...v0.7.24) (2023-07-05)
 
 
