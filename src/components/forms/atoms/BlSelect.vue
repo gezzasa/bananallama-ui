@@ -15,35 +15,20 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs, computed } from 'vue';
-
-const props = defineProps({
-  id: {
-    type: String,
-    required: true,
-  },
-  modelValue: {
-    type: String,
-    required: true,
-  },
-  disabled: {
-    type: Boolean,
-  },
-  error: {
-    type: Boolean,
-    default: false,
-  },
-});
-
-const { modelValue, error } = toRefs(props);
+const { id, modelValue, disabled = false, error = false } = defineProps<{
+  id: string;
+  modelValue: string;
+  disabled?: boolean;
+  error?: boolean;
+}>();
 
 const emit = defineEmits(['update:modelValue']);
 
-const computedValue = computed({
+const computedValue = computed<string>({
   get() {
-    return modelValue.value;
+    return modelValue;
   },
-  set(value: Object) {
+  set(value) {
     emit('update:modelValue', value);
   },
 });

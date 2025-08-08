@@ -12,37 +12,20 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs, computed } from 'vue';
-
-type TextArea = string | number | string[] | undefined
-
-const props = defineProps({
-  modelValue: {
-    type: String,
-    required: true,
-  },
-  type: {
-    type: String,
-    default: 'text',
-  },
-  disabled: {
-    type: Boolean,
-  },
-  error: {
-    type: Boolean,
-    default: false,
-  },
-});
-
-const { modelValue, error } = toRefs(props);
+const { modelValue, type = 'text', disabled = false, error = false } = defineProps<{
+  modelValue: string;
+  type?: string;
+  disabled?: boolean;
+  error?: boolean;
+}>();
 
 const emit = defineEmits(['update:modelValue']);
 
-const computedValue = computed({
+const computedValue = computed<string>({
   get() {
-    return modelValue.value;
+    return modelValue;
   },
-  set(value: TextArea) {
+  set(value) {
     emit('update:modelValue', value);
   },
 });

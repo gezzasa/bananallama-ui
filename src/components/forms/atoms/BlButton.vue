@@ -10,27 +10,13 @@
 </template>
 
 <script setup lang="ts">
-import { type PropType, toRefs } from 'vue';
-export type ButtonType = 'button' | 'submit' | 'reset' | undefined
+import type { BlButtonStyle } from '@/types/global';
 
-const props = defineProps({
-  label: {
-    type: String,
-    default: '',
-  },
-  type: {
-    type: String as PropType<ButtonType>,
-    default: 'button',
-  },
-  buttonStyle: {
-    type: String as PropType<ButtonStyle>,
-    default: 'primary',
-  },
-  buttonType: {
-    type: String as PropType<ButtonType>,
-    default: 'button',
-  },
-});
+export type ButtonType = 'button' | 'submit' | 'reset';
 
-const { label, type } = toRefs(props);
+const { label = '', type = 'button', buttonStyle = 'primary' } = defineProps<{
+  label?: string;
+  type?: ButtonType;
+  buttonStyle?: BlButtonStyle;
+}>();
 </script>

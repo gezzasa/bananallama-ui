@@ -9,14 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from 'vue';
-
-const props = defineProps({
-  option: {
-    type: String,
-    required: true,
-  },
-});
-
-const { option } = toRefs(props);
+const { option } = defineProps<{
+  option: string;
+}>();
 </script>
