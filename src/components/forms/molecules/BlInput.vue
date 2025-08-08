@@ -9,7 +9,7 @@
     </span>
     <BlInput
       :id="id"
-      v-bind="$attrs"
+      v-model="computedValue"
       :error="!!errors.length"
     />
     <BlError :errors="errors" />
@@ -17,10 +17,11 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from 'vue';
+import { type PropType, toRefs, computed } from 'vue';
 import BlInput from '../atoms/BlInput.vue';
 import BlLabel from '../atoms/BlLabel.vue';
 import BlError from '../atoms/BlError.vue';
+import type { BlFormError } from '@/types/global';
 
 const props = defineProps({
   label: {
@@ -32,10 +33,25 @@ const props = defineProps({
     default: '',
   },
   errors: {
-    type: Array,
+    type: Array as PropType<BlFormError[]>,
     default: () => [],
+  },
+  modelValue: {
+    type: String,
+    required: true,
   },
 });
 
-const { label, id, errors } = toRefs(props);
+const { label, id, errors, modelValue } = toRefs(props);
+
+const emit = defineEmits(['update:modelValue']);
+
+const computedValue = computed({
+  get() {
+    return modelValue.value;
+  },
+  set(value:string) {
+    emit('update:modelValue', value);
+  },
+});
 </script>

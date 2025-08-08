@@ -56,7 +56,7 @@ export default defineComponent({
       required: true,
     },
     suggestions: {
-      type: Array,
+      type: Array as PropType<string[]>,
       default: () => [],
     },
     suggestionCharacter: {
@@ -119,7 +119,7 @@ export default defineComponent({
         OrderedList,
         History,
         HardBreak,
-        props.suggestions.length ? mention : null,
+        mention,
       ],
       onUpdate: ({ editor }) => {
         emit('update:modelValue', editor.getHTML());

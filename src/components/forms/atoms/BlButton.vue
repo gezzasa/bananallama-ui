@@ -22,6 +22,14 @@ const props = defineProps({
     type: String as PropType<ButtonType>,
     default: 'button',
   },
+  buttonStyle: {
+    type: String as PropType<ButtonStyle>,
+    default: 'primary',
+  },
+  buttonType: {
+    type: String as PropType<ButtonType>,
+    default: 'button',
+  },
 });
 
 const { label, type } = toRefs(props);

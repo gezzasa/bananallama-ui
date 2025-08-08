@@ -6,7 +6,7 @@
     <slot name="label-before" />
     <BlCheckbox
       :id="id"
-      v-bind="$attrs"
+      v-model="computedValue"
       type="checkbox"
     />
     <span
@@ -19,10 +19,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed, toRefs } from 'vue';
 import BlCheckbox from '../atoms/BlCheckbox.vue';
 import BlLabel from '../atoms/BlLabel.vue';
 
-defineProps({
+const props = defineProps({
   label: {
     type: String,
     default: '',
@@ -30,6 +31,23 @@ defineProps({
   id: {
     type: String,
     default: '',
+  },
+  modelValue: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const { modelValue } = toRefs(props);
+
+const emit = defineEmits(['update:modelValue']);
+
+const computedValue = computed({
+  get() {
+    return modelValue.value;
+  },
+  set(value:boolean) {
+    emit('update:modelValue', value);
   },
 });
 </script>

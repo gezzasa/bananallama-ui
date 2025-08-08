@@ -9,7 +9,7 @@
     </span>
     <BlTextArea
       :id="id"
-      v-bind="$attrs"
+      v-model="computedValue"
       :error="!!errors.length"
     />
     <BlError :errors="errors" />
@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs, type PropType } from 'vue';
+import { computed, toRefs, type PropType } from 'vue';
 import BlTextArea from '../atoms/BlTextArea.vue';
 import BlLabel from '../atoms/BlLabel.vue';
 import BlError from '../atoms/BlError.vue';
@@ -32,11 +32,26 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  modelValue: {
+    type: String,
+    required: true,
+  },
   errors: {
     type: Array as PropType<BlFormError[]>,
     default: () => [],
   },
 });
 
-const { label, id, errors } = toRefs(props);
+const { label, id, errors, modelValue } = toRefs(props);
+
+const emit = defineEmits(['update:modelValue']);
+
+const computedValue = computed({
+  get() {
+    return modelValue.value;
+  },
+  set(value:string) {
+    emit('update:modelValue', value);
+  },
+});
 </script>
