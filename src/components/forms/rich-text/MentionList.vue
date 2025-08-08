@@ -38,7 +38,7 @@ export default defineComponent({
   setup(props) {
     const selectedIndex = ref<number>(0);
 
-    function onKeyDown({ event }) {
+    function onKeyDown({ event }: {event: KeyboardEvent}) {
       if (event.key === 'ArrowUp') {
         upHandler();
         return true;

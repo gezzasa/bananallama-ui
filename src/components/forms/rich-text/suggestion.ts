@@ -5,7 +5,7 @@ import MentionList from './MentionList.vue';
 
 export default {
   render: () => {
-    let component;
+    let component: VueRenderer;
     let popup;
 
     return {

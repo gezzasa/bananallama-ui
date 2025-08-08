@@ -6,3 +6,6 @@
 
 ## Stories
 - BlSelect
+
+## Components
+- Style color picker

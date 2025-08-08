@@ -5,7 +5,7 @@ npm i bananallama-ui
 ```
 
 ## Description
-A simple and accessible Vue 3 UI Library with customizable styles
+A simple Vue 3 UI Library with customizable styles
 
 ## Features
 The following elements are available to use
@@ -16,9 +16,6 @@ The following elements are available to use
 - Select
 - Textarea
 - Color picker
-
-## Storybook
-The Components can be viewed [here](https://bananallama-ui.vercel.app)
 
 ## Usage
 

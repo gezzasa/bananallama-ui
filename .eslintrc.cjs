@@ -10,7 +10,6 @@ module.exports = {
     'plugin:vue/vue3-essential',
     '@vue/eslint-config-typescript',
     'plugin:vuejs-accessibility/recommended',
-    'plugin:storybook/recommended',
   ],
   rules: {
     'array-element-newline': [

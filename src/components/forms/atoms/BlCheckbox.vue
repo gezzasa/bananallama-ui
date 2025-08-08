@@ -12,28 +12,18 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs, computed } from 'vue';
-
-const props = defineProps({
-  modelValue: {
-    type: Boolean,
-    required: true,
-  },
-  error: {
-    type: Boolean,
-    default: false,
-  },
-});
-
-const { modelValue, error } = toRefs(props);
+const { modelValue, error = false } = defineProps<{
+  modelValue: boolean;
+  error?: boolean;
+}>();
 
 const emit = defineEmits(['update:modelValue']);
 
-const computedValue = computed({
+const computedValue = computed<boolean>({
   get() {
-    return modelValue.value;
+    return modelValue;
   },
-  set(value: Boolean) {
+  set(value) {
     emit('update:modelValue', value);
   },
 });

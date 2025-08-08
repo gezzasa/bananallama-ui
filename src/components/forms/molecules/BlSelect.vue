@@ -9,7 +9,7 @@
     </span>
     <BlSelect
       :id="id"
-      v-bind="$attrs"
+      v-model="computedValue"
       :error="!!errors.length"
     >
       <slot name="additional-options-before" />
@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue';
+import { type PropType, computed } from 'vue';
 import type { BlFormError } from '@/types/global';
 import { toRefs } from 'vue';
 import BlSelect from '../atoms/BlSelect.vue';
@@ -48,11 +48,26 @@ const props = defineProps({
     type: Array as PropType<string[]>,
     default: null,
   },
+  modelValue: {
+    type: String,
+    required: true,
+  },
   errors: {
     type: Array as PropType<BlFormError[]>,
     default: () => [],
   },
 });
 
-const { label, id, options, errors } = toRefs(props);
+const { label, id, options, errors, modelValue } = toRefs(props);
+
+const emit = defineEmits(['update:modelValue']);
+
+const computedValue = computed({
+  get() {
+    return modelValue.value;
+  },
+  set(value:string) {
+    emit('update:modelValue', value);
+  },
+});
 </script>
