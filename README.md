@@ -17,9 +17,6 @@ The following elements are available to use
 - Textarea
 - Color picker
 
-## Storybook
-The Components can be viewed [here](https://bananallama-ui.vercel.app)
-
 ## Usage
 
 ### Styles
