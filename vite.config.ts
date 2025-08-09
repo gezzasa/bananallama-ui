@@ -12,8 +12,4 @@ export default defineConfig({
       'vue' : resolve(__dirname, './node_modules/vue'),
     },
   },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-  },
 });
