@@ -6,6 +6,9 @@
   "main": "src/components/index.ts",
   "homepage": "https://gezzasa.github.io/bananallama-ui",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore src",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "test": "vitest --run",

@@ -7,9 +7,13 @@ import vue from '@vitejs/plugin-vue';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  server: {
+    port: 8080,
+  },
   resolve: {
     alias: {
-      'vue' : resolve(__dirname, './node_modules/vue'),
+      '@': resolve(__dirname, './src'),
+      'vue': resolve(__dirname, './node_modules/vue'),
     },
   },
 });
