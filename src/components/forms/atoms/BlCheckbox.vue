@@ -12,6 +12,8 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+
 const { modelValue, error = false } = defineProps<{
   modelValue: boolean;
   error?: boolean;
