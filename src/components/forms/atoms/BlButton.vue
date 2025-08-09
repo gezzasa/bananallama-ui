@@ -1,6 +1,7 @@
 <template>
   <button
     class="bl-button"
+    :class="`bl-button--${buttonStyle}`"
     :type="type"
     data-test="bl-button"
     v-bind="$attrs"
