@@ -1,37 +1,37 @@
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
-
 <template>
   <select
     :id="id"
     v-model="computedValue"
-    :name="id"
+    :name="name || id"
+    :disabled="disabled"
+    :required="required"
     class="bl-select"
     data-test="bl-select"
-    :class="{ 'bl-input-error': error }"
-    :disabled="disabled"
+    :class="{ 
+      'bl-select--error': error,
+      'bl-select--disabled': disabled
+    }"
   >
     <slot />
   </select>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { useFormInput, type BaseInputProps, FORM_EMITS } from '../composables/useFormInput';
 
-const { id, modelValue, disabled = false, error = false } = defineProps<{
-  id: string;
-  modelValue: string;
-  disabled?: boolean;
-  error?: boolean;
-}>();
+interface Props extends Omit<BaseInputProps, 'placeholder'> {
+  multiple?: boolean;
+}
 
-const emit = defineEmits(['update:modelValue']);
-
-const computedValue = computed<string>({
-  get() {
-    return modelValue;
-  },
-  set(value) {
-    emit('update:modelValue', value);
-  },
+const props = withDefaults(defineProps<Props>(), {
+  disabled: false,
+  error: false,
+  required: false,
+  multiple: false,
 });
+
+const emit = defineEmits(FORM_EMITS);
+
+const computedValue = useFormInput<string>(props.modelValue, emit);
 </script>

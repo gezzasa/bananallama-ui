@@ -1,57 +1,56 @@
 <template>
-  <BlLabel
-    v-if="label"
-    :is-for="id"
-    class-name="bl-input-group"
+  <BlFormField
+    :label="label"
+    :id="id"
+    :errors="errors"
+    :help-text="helpText"
+    :required="required"
+    :disabled="disabled"
   >
-    <span class="bl-input__label-copy">
-      <slot name="label">{{ label }}</slot>
-    </span>
-    <BlInput
-      :id="id"
-      v-model="computedValue"
-      :error="!!errors.length"
-    />
-    <BlError :errors="errors" />
-  </BlLabel>
+    <template #default="{ id: fieldId, error, disabled: fieldDisabled, required: fieldRequired }">
+      <BlInputAtom
+        :id="fieldId"
+        v-model="computedValue"
+        :type="type"
+        :placeholder="placeholder"
+        :disabled="fieldDisabled"
+        :required="fieldRequired"
+        :error="error"
+        v-bind="$attrs"
+      />
+    </template>
+  </BlFormField>
 </template>
 
 <script setup lang="ts">
-import { type PropType, toRefs, computed } from 'vue';
-import BlInput from '../atoms/BlInput.vue';
-import BlLabel from '../atoms/BlLabel.vue';
-import BlError from '../atoms/BlError.vue';
+import { computed } from 'vue';
+import BlFormField from './BlFormField.vue';
+import BlInputAtom from '../atoms/BlInput.vue';
 import type { BlFormError } from '@/types/global';
 
-const props = defineProps({
-  label: {
-    type: String,
-    default: '',
-  },
-  id: {
-    type: String,
-    default: '',
-  },
-  errors: {
-    type: Array as PropType<BlFormError[]>,
-    default: () => [],
-  },
-  modelValue: {
-    type: String,
-    required: true,
-  },
-});
+interface Props {
+  label?: string;
+  id?: string;
+  modelValue: string;
+  type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search';
+  placeholder?: string;
+  errors?: BlFormError[];
+  helpText?: string;
+  required?: boolean;
+  disabled?: boolean;
+}
 
-const { label, id, errors, modelValue } = toRefs(props);
+const props = withDefaults(defineProps<Props>(), {
+  type: 'text',
+  errors: () => [],
+  required: false,
+  disabled: false,
+});
 
 const emit = defineEmits(['update:modelValue']);
 
 const computedValue = computed({
-  get() {
-    return modelValue.value;
-  },
-  set(value:string) {
-    emit('update:modelValue', value);
-  },
+  get: () => props.modelValue,
+  set: (value: string) => emit('update:modelValue', value),
 });
 </script>

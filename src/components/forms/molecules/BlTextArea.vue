@@ -1,57 +1,61 @@
 <template>
-  <BlLabel
-    v-if="label"
-    :is-for="id"
-    class-name="bl-input-group"
+  <BlFormField
+    :label="label"
+    :id="id"
+    :errors="errors"
+    :help-text="helpText"
+    :required="required"
+    :disabled="disabled"
   >
-    <span class="bl-input__label-copy">
-      <slot name="label">{{ label }}</slot>
-    </span>
-    <BlTextArea
-      :id="id"
-      v-model="computedValue"
-      :error="!!errors.length"
-    />
-    <BlError :errors="errors" />
-  </BlLabel>
+    <template #default="{ id: fieldId, error, disabled: fieldDisabled, required: fieldRequired }">
+      <BlTextAreaAtom
+        :id="fieldId"
+        v-model="computedValue"
+        :placeholder="placeholder"
+        :rows="rows"
+        :cols="cols"
+        :resize="resize"
+        :disabled="fieldDisabled"
+        :required="fieldRequired"
+        :error="error"
+        v-bind="$attrs"
+      />
+    </template>
+  </BlFormField>
 </template>
 
 <script setup lang="ts">
-import { computed, toRefs, type PropType } from 'vue';
-import BlTextArea from '../atoms/BlTextArea.vue';
-import BlLabel from '../atoms/BlLabel.vue';
-import BlError from '../atoms/BlError.vue';
-import { BlFormError } from '@/types/global';
+import { computed } from 'vue';
+import BlFormField from './BlFormField.vue';
+import BlTextAreaAtom from '../atoms/BlTextArea.vue';
+import type { BlFormError } from '@/types/global';
 
-const props = defineProps({
-  label: {
-    type: String,
-    default: '',
-  },
-  id: {
-    type: String,
-    default: '',
-  },
-  modelValue: {
-    type: String,
-    required: true,
-  },
-  errors: {
-    type: Array as PropType<BlFormError[]>,
-    default: () => [],
-  },
+interface Props {
+  label?: string;
+  id?: string;
+  modelValue: string;
+  placeholder?: string;
+  rows?: number;
+  cols?: number;
+  resize?: 'none' | 'both' | 'horizontal' | 'vertical';
+  errors?: BlFormError[];
+  helpText?: string;
+  required?: boolean;
+  disabled?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  rows: 4,
+  resize: 'vertical',
+  errors: () => [],
+  required: false,
+  disabled: false,
 });
-
-const { label, id, errors, modelValue } = toRefs(props);
 
 const emit = defineEmits(['update:modelValue']);
 
 const computedValue = computed({
-  get() {
-    return modelValue.value;
-  },
-  set(value:string) {
-    emit('update:modelValue', value);
-  },
+  get: () => props.modelValue,
+  set: (value: string) => emit('update:modelValue', value),
 });
 </script>

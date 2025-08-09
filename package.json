@@ -6,7 +6,7 @@
   "main": "src/components/index.ts",
   "homepage": "https://gezzasa.github.io/bananallama-ui",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "release": "semantic-release",

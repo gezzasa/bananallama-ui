@@ -1,32 +1,35 @@
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
-
 <template>
   <input
     v-bind="$attrs"
     v-model="computedValue"
     type="checkbox"
+    :id="id"
+    :name="name"
+    :disabled="disabled"
+    :required="required"
+    :value="value"
     class="bl-checkbox"
     data-test="bl-checkbox"
-    :class="{ 'bl-input-error': error }"
+    :class="{ 
+      'bl-checkbox--error': error,
+      'bl-checkbox--disabled': disabled
+    }"
   >
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { useFormInput, FORM_EMITS, type BaseCheckboxProps } from '../composables/useFormInput';
 
-const { modelValue, error = false } = defineProps<{
-  modelValue: boolean;
-  error?: boolean;
-}>();
+interface Props extends BaseCheckboxProps {}
 
-const emit = defineEmits(['update:modelValue']);
-
-const computedValue = computed<boolean>({
-  get() {
-    return modelValue;
-  },
-  set(value) {
-    emit('update:modelValue', value);
-  },
+const props = withDefaults(defineProps<Props>(), {
+  disabled: false,
+  error: false,
+  required: false,
 });
+
+const emit = defineEmits(FORM_EMITS);
+
+const computedValue = useFormInput<boolean>(props.modelValue, emit);
 </script>
