@@ -2,7 +2,8 @@
 <template>
   <input
     v-bind="$attrs"
-    v-model="computedValue"
+    :checked="modelValue"
+    @change="handleChange"
     type="checkbox"
     :id="id"
     :name="name"
@@ -19,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { useFormInput, FORM_EMITS, type BaseCheckboxProps } from '../composables/useFormInput';
+import type { BaseCheckboxProps } from '../composables/useFormInput';
 
 interface Props extends BaseCheckboxProps {}
 
@@ -29,7 +30,12 @@ const props = withDefaults(defineProps<Props>(), {
   required: false,
 });
 
-const emit = defineEmits(FORM_EMITS);
+const emit = defineEmits<{
+  'update:modelValue': [value: boolean]
+}>();
 
-const computedValue = useFormInput<boolean>(props.modelValue, emit);
+const handleChange = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emit('update:modelValue', target.checked);
+};
 </script>

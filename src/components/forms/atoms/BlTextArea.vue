@@ -2,7 +2,8 @@
 <template>
   <textarea
     v-bind="$attrs"
-    v-model="computedValue"
+    :value="modelValue"
+    @input="handleInput"
     :id="id"
     :name="name"
     :disabled="disabled"
@@ -22,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { useFormInput, type BaseInputProps, FORM_EMITS } from '../composables/useFormInput';
+import type { BaseInputProps } from '../composables/useFormInput';
 
 interface Props extends BaseInputProps {
   rows?: number;
@@ -40,7 +41,12 @@ const props = withDefaults(defineProps<Props>(), {
   resize: 'vertical',
 });
 
-const emit = defineEmits(FORM_EMITS);
+const emit = defineEmits<{
+  'update:modelValue': [value: string]
+}>();
 
-const computedValue = useFormInput<string>(props.modelValue, emit);
+const handleInput = (event: Event) => {
+  const target = event.target as HTMLTextAreaElement;
+  emit('update:modelValue', target.value);
+};
 </script>

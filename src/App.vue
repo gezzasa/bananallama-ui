@@ -189,28 +189,6 @@
             />
             <div class="value-display">Value: {{ formData.richTextValue }}</div>
           </div>
-
-          <!-- Interactive Components -->
-          <div class="component-demo">
-            <h3>Interactive Molecules</h3>
-            <BlColorPicker
-              id="demo-color"
-              v-model="formData.colorValue"
-              label="Color Picker Molecule"
-              help-text="Enhanced color picker with validation"
-              :errors="[]"
-            />
-            <div class="value-display">Value: "{{ formData.colorValue }}"</div>
-
-            <BlRichText
-              id="demo-richtext"
-              v-model="formData.richTextValue"
-              label="Rich Text Editor"
-              help-text="Enhanced rich text editor"
-              :errors="[]"
-            />
-            <div class="value-display">Rich Text HTML: {{ formData.richTextValue }}</div>
-          </div>
         </BlGrid>
       </section>
 
@@ -370,7 +348,7 @@ import {
 import type { BlFormError } from './types/global';
 
 // Atom data for showcasing basic components
-const atomData = ref({
+const atomData = reactive({
   input: 'Sample atom input text',
   textarea: 'Sample atom textarea content\nMultiple lines supported',
   checkbox: true,
@@ -431,14 +409,14 @@ const actionMessage = ref<string>('');
 
 // Event handlers
 const handleAtomClick = () => {
-  atomData.value.buttonClicks++;
-  actionMessage.value = `Atom button clicked! Total clicks: ${atomData.value.buttonClicks}`;
+  atomData.buttonClicks++;
+  actionMessage.value = `Atom button clicked! Total clicks: ${atomData.buttonClicks}`;
   setTimeout(() => actionMessage.value = '', 3000);
 };
 
 const handleLinkClick = () => {
-  atomData.value.linkClicks++;
-  actionMessage.value = `Atom link clicked! Total clicks: ${atomData.value.linkClicks}`;
+  atomData.linkClicks++;
+  actionMessage.value = `Atom link clicked! Total clicks: ${atomData.linkClicks}`;
   setTimeout(() => actionMessage.value = '', 3000);
 };
 

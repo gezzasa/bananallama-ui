@@ -2,7 +2,8 @@
 <template>
   <input
     v-bind="$attrs"
-    v-model="computedValue"
+    :value="modelValue"
+    @input="handleInput"
     :type="type"
     :id="id"
     :name="name"
@@ -21,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { useFormInput, type BaseInputProps, FORM_EMITS } from '../composables/useFormInput';
+import type { BaseInputProps } from '../composables/useFormInput';
 
 interface Props extends BaseInputProps {
   type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search';
@@ -36,7 +37,12 @@ const props = withDefaults(defineProps<Props>(), {
   placeholder: '',
 });
 
-const emit = defineEmits(FORM_EMITS);
+const emit = defineEmits<{
+  'update:modelValue': [value: string]
+}>();
 
-const computedValue = useFormInput<string>(props.modelValue, emit);
+const handleInput = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emit('update:modelValue', target.value);
+};
 </script>

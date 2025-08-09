@@ -2,7 +2,8 @@
 <template>
   <select
     :id="id"
-    v-model="computedValue"
+    :value="modelValue"
+    @change="handleChange"
     :name="name || id"
     :disabled="disabled"
     :required="required"
@@ -18,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { useFormInput, type BaseInputProps, FORM_EMITS } from '../composables/useFormInput';
+import type { BaseInputProps } from '../composables/useFormInput';
 
 interface Props extends Omit<BaseInputProps, 'placeholder'> {
   multiple?: boolean;
@@ -31,7 +32,12 @@ const props = withDefaults(defineProps<Props>(), {
   multiple: false,
 });
 
-const emit = defineEmits(FORM_EMITS);
+const emit = defineEmits<{
+  'update:modelValue': [value: string]
+}>();
 
-const computedValue = useFormInput<string>(props.modelValue, emit);
+const handleChange = (event: Event) => {
+  const target = event.target as HTMLSelectElement;
+  emit('update:modelValue', target.value);
+};
 </script>
