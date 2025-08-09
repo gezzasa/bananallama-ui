@@ -1,6 +1,6 @@
 {
   "name": "bananallama-ui",
-  "version": "0.7.25",
+  "version": "0.7.26",
   "description": "A simple Vue 3 UI Library",
   "type": "module",
   "main": "src/components/index.ts",

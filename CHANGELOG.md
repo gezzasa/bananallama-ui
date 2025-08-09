@@ -1,3 +1,16 @@
+## <small>0.7.26 (2025-08-09)</small>
+
+* Merge pull request #39 from gezzasa/BL-test ([0116cf4](https://github.com/gezzasa/bananallama-ui/commit/0116cf4)), closes [#39](https://github.com/gezzasa/bananallama-ui/issues/39)
+* Merge pull request #40 from gezzasa/BL-dev ([b4c5a55](https://github.com/gezzasa/bananallama-ui/commit/b4c5a55)), closes [#40](https://github.com/gezzasa/bananallama-ui/issues/40)
+* chore(): update files to new version ([0257e72](https://github.com/gezzasa/bananallama-ui/commit/0257e72))
+* chore(): update server config ([852cbea](https://github.com/gezzasa/bananallama-ui/commit/852cbea))
+* chore(): update types for props ([18be188](https://github.com/gezzasa/bananallama-ui/commit/18be188))
+* chore(eslint): fix lint config ([bd913df](https://github.com/gezzasa/bananallama-ui/commit/bd913df))
+* chore(semantic): fix semantic release ([995e3ad](https://github.com/gezzasa/bananallama-ui/commit/995e3ad))
+* chore(tests): fix test runner ([182c972](https://github.com/gezzasa/bananallama-ui/commit/182c972))
+* fix(): update v-bind to model value ([04aa722](https://github.com/gezzasa/bananallama-ui/commit/04aa722))
+* fix(dependencies): Update dependencies ([6f54edc](https://github.com/gezzasa/bananallama-ui/commit/6f54edc))
+
 ## [0.7.25](https://github.com/gezzasa/bananallama-ui/compare/v0.7.24...v0.7.25) (2023-07-08)
 
 
