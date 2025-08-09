@@ -1,0 +1,21 @@
+{
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "typescript": true,
+    "javascript": true,
+    "vue": true
+  },
+  "github.copilot.chat.enableCodeContext": true,
+  "github.copilot.chat.enableProjectContext": true,
+  "github.copilot.advanced": {
+    "length": 3000,
+    "temperature": "",
+    "top_p": "",
+    "debug.overrideEngine": "",
+    "debug.testOverrideProxyUrl": "",
+    "debug.overrideProxyUrl": ""
+  }
+}

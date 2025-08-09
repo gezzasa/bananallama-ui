@@ -15,6 +15,8 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+
 const { id, modelValue, disabled = false, error = false } = defineProps<{
   id: string;
   modelValue: string;
